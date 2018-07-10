@@ -1,0 +1,165 @@
+button, .button{
+    font-size: 12px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: $button-border-radius;
+    padding: 12px;
+    text-transform: uppercase;
+    color: $orange;
+    font-weight: bold;
+    font-family: 'Roboto-Medium', Arial;
+    outline: none;
+    text-decoration: none;
+    border: none;
+
+    @include row(middle, center);
+    line-height: 16px;
+
+    &.apply-btn{
+      position: absolute;
+      right: 10px;
+      top: 65PX;
+      padding: 7px;
+      font-size: 12px;
+
+      &:disabled{
+        color: #cccccc;
+      }
+    }
+
+
+    &.default{
+      color: $orange;
+      background-color: #efefef;
+    }
+
+    &.lone{
+      min-width: 150px;
+      margin: 25px auto;
+      padding-left: 40px;
+      padding-right: 40px;
+      display: block;
+    }
+
+    &.primary {
+      background-color: $orange;
+      color: white;
+
+      &:disabled, &.disabled{
+        background-color: #cccccc;
+        color: #a1a1a1;
+        box-shadow: none!important;
+      }
+    }
+
+    &.raised{
+      box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    &.block{
+      width: 100%;
+      margin-top: 24px;
+      margin-bottom: 24px;
+    }
+
+    &.bottom-right{
+      position: fixed;
+      right: $global_padding;
+      bottom: $global_padding;
+
+      &.primary{
+        border-radius: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+
+    &.fab{
+      border-radius: 50%;
+      -webkit-border-radius:50;
+      -moz-border-radius:5px;
+      border: none;
+      width: 56px;
+      height: 56px;
+      box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, .3);
+      background-color: $orange;
+      &.bottom-right{
+        position: fixed;
+        right: $global_padding;
+        bottom: 35px;;
+      }
+    }
+    &.nav-button, &.icon-button{
+      padding: 0;
+      background: none;
+      border: none;
+    }
+
+    &.icon-button{
+      >svg:not(:last-child){
+        margin-right: 5px!important;
+      }
+    }
+
+    &.image-upload{
+      width: 72px;
+      height: 72px;
+      background-size: 24px;
+      background-color: $white_nine;
+      box-shadow: 0 3px 1px 0 $black_three_two_12;
+    }
+
+    &.caret{
+      margin: 4px 0;
+      width: 16px;
+      height: 16px;
+      border-radius: 0;
+      border: solid 3px white;
+
+      &.up{
+        border-bottom: none;
+        border-right: none;
+        transform: translateY(5px) translateX(5px) rotate(45deg);
+      }
+      &.down{
+        border-top: none;
+        border-left: none;
+        transform: translateY(-4px) translateX(-2px) rotate(45deg);
+      }
+    }
+}
+
+.two-button-set{
+    word-spacing: 20px;
+    text-align: center;
+    >button{
+        padding-left: 0;
+        padding-right: 0;
+        width: 425px;
+    }
+}
+
+.bottom.fixed.full-width{
+  >button.block{
+    margin: 0;
+    box-shadow: 0px -2px 4px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 0;
+    height: 56px;
+    font-size: 14px;
+  }
+}
+
+.login-button{
+    padding-top: 16px;
+    padding-bottom: 16px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 41px;
+    box-shadow: 0 2px 4px 0 $black_three_two_12;
+    color: white;
+
+    &.facebook{
+      background-color: #507cc0;
+    }
+}

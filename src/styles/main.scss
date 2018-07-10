@@ -1,0 +1,176 @@
+@import '_variables';
+@import 'fonts';
+@import 'common';
+@import "typography";
+@import 'input';
+@import 'button';
+@import 'account';
+
+html{
+  background-color:#fff;
+  overflow: auto;
+}
+body{
+  position:fixed; /* prevent overscroll bounce*/
+  overflow-y:scroll;
+  -webkit-overflow-scrolling: touch; /* iOS velocity scrolling */
+}
+.no-scroll{
+  overflow: hidden!important;
+}
+
+.content{
+    padding: 12px 24px;
+}
+
+.raised {
+  box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.2);
+}
+.fixed-header{
+  height: 100%;
+  >.head{
+    width: calc(100% - 30px);
+    position: fixed;
+    padding: 0 15px;
+    height: 60px;
+    line-height: 60px;
+    top: 0;
+    overflow: hidden;
+    z-index: 2;
+
+    .heading-0{
+      line-height: 60px;
+    }
+
+    &:not(.app-bar){
+      background-color: white;
+    }
+
+    >.back-button{
+      margin-right: 12px;
+    }
+
+    .lines{
+      max-width: calc(100% - 94px);
+      overflow: hidden;
+      >*{
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+  }
+
+  >.body{
+    min-height: calc(100% - 60px);
+    padding-top: 60px;
+    width: 100%;
+    z-index: 1;
+    overflow-x: hidden;
+  }
+  &.clear-bottom{
+    >.body{
+      padding-bottom: 56px;
+      min-height: calc(100% - 116px);
+    }
+  }
+}
+
+
+.clear-bottom > .container{
+  padding-bottom: 56px;
+}
+
+.clear-next-button{
+  padding-bottom: 70px;
+}
+
+.container{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.profile-flow{
+  .container{
+    padding-left: 24px;
+    padding-right: 24px;
+    &.single-section{
+      padding-top: 40px;
+    }
+  }
+}
+
+.content-float{
+  overflow-x: hidden;
+  .app-bar{
+    height: 70px;
+  }
+  .container {
+    margin-top: -60px;
+
+    >.section{
+      &:first-child{
+        .content{
+          margin-top: -32px;
+        }
+        .image{
+          background: #f3f3f3;
+          border-radius: 50%;
+          top: -36px;
+          width: 70px;
+          height: 70px;
+          line-height: 70px;
+          background-color: #383838;
+
+          >.circle{
+            line-height: 70px;
+          }
+          >.icon{
+            line-height: initial;
+          }
+          >img{
+            border-radius: 50%;
+          }
+          >*{
+            color: white;
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.app-bar{
+    color: white!important;
+    padding: 20px;
+    background-color: $orange;
+    background-image: url(../assets/texture_overlay.png);
+    background-position: center;
+    // background-attachment: fixed;
+    background-size: 159%;
+    background-repeat: no-repeat;
+    .heading-0{
+      color: white;
+    }
+    .button, button{
+      color: white;
+    }
+    button.icon-button.back{
+      width: 35px;
+      position: relative;
+      left: -10px;
+    }
+
+    >.title{
+      font-family: 'Lato', sans-serif;
+      padding-top: 1px;
+      font-size: 32px;
+      line-height: 40px;
+      font-weight: 900;
+    }
+
+    >svg.logo{
+      margin-left: -7px;
+    }
+}
